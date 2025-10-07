@@ -26,7 +26,7 @@ const TodoInput = ({todos, setTodos}) => {
     }
 
     const checkTextBox = () => {
-        let textBox = document.querySelector('new-todo');
+        let textBox = document.querySelector('.new-todo');
         if(textBox.value===""){
             alert("Please add a task");
         }
