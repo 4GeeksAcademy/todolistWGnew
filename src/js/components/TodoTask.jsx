@@ -2,11 +2,20 @@
  
  const TodoTask = ({todos, setTodos}) => {
 
+    const deleteTask = (todoId) => {
+        let updatedTodos = todos.filter(todo => todo.id !== todoId);
+        setTodos(updatedTodos);
+    }
+
     let renderTasks = todos.map(todo => {
 
         return(
             <li className = "list-item" key={todo.id}>
                 <label>{todo.title}</label>
+                <button 
+                    className = "delete-task"
+                    onClick={ () => {deleteTask(todo.id)}}
+                >X</button>
             </li>
         );
     })

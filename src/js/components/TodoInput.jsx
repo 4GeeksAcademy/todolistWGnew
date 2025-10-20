@@ -37,7 +37,10 @@ const TodoInput = ({todos, setTodos}) => {
     }
 
     return (
+        
         <>
+                        <h1>ToDos</h1>
+
             <input
                 type='text'
                 className='new-todo'
@@ -47,8 +50,8 @@ const TodoInput = ({todos, setTodos}) => {
             />
             <button
                 className='add-task'
-                onClick={checkTextBox}
-            >Add Task</button>
+                onClick={checkTextBox}>Add Task
+            </button>
         </>
     );
 }
